@@ -139,10 +139,12 @@ body {
       background-color: var(--color-primary);
       z-index: -1;
       transform: scaleY(0);
-      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
   .sidebar__item:hover::before, .sidebar__item--active::before {
     transform: scaleY(1);
     width: 100%; }
+  .sidebar__item:active::before {
+    background-color: var(--color-primary-light); }
   .sidebar__link:link, .sidebar__link:visited {
     display: block;
     text-decoration: none;
