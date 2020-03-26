@@ -133,10 +133,33 @@
     }
 
     &__item {
-        
+        position: relative;
+        z-index: 1;
+
         &:not(:last-child) {
             margin-bottom: .5rem;
         }
+
+        &::before,
+        &--active::before {
+            position: absolute;
+            content: '';
+            left:0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background-color: var(--color-primary);
+            z-index: -1;
+            transform: scaleY(0);
+            transition: transform .2s,
+                        width .4s cubic-bezier(1, 0, 0, 1) .2s;
+        }
+    }
+    // Smooth Hover Effect
+    &__item:hover::before, 
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
     }
     &__link:link,
     &__link:visited {
@@ -146,15 +169,8 @@
         text-transform: uppercase;
         font-size: 1.4rem;
         padding: 1.5rem 3rem;
-        transition: all .3s;
         display: flex;
         align-items: center;
-
-        //TODO: hover effect will be changed later
-        &:hover {
-            background-color: var(--color-primary);
-        }
-
     }
     &__icon {
         width: 1.75rem;
@@ -162,8 +178,6 @@
         fill: #fff;
         margin-right: 2rem;
     }
-
-
     .copyright-area {
         font-size: 1.2rem;
         color: var(--color-grey-light-4);

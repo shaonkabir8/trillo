@@ -124,8 +124,25 @@ body {
   .sidebar__nav {
     margin-top: 3.5rem;
     list-style: none; }
-  .sidebar__item:not(:last-child) {
-    margin-bottom: .5rem; }
+  .sidebar__item {
+    position: relative;
+    z-index: 1; }
+    .sidebar__item:not(:last-child) {
+      margin-bottom: .5rem; }
+    .sidebar__item::before, .sidebar__item--active::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background-color: var(--color-primary);
+      z-index: -1;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+  .sidebar__item:hover::before, .sidebar__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
   .sidebar__link:link, .sidebar__link:visited {
     display: block;
     text-decoration: none;
@@ -133,11 +150,8 @@ body {
     text-transform: uppercase;
     font-size: 1.4rem;
     padding: 1.5rem 3rem;
-    transition: all .3s;
     display: flex;
     align-items: center; }
-    .sidebar__link:link:hover, .sidebar__link:visited:hover {
-      background-color: var(--color-primary); }
   .sidebar__icon {
     width: 1.75rem;
     height: 1.75rem;
