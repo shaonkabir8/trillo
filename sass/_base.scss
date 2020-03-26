@@ -42,3 +42,12 @@ body {
 
     min-height: 100vh;
 }
+
+
+
+// Mixins
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

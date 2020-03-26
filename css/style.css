@@ -37,8 +37,9 @@ body {
   font-size: 1.4rem;
   height: 7rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between; }
   .header .logo {
     margin-left: 2rem;
     height: 3.25rem; }
@@ -88,6 +89,7 @@ body {
       height: 100%;
       transition: all .2s;
       display: flex;
+      justify-content: center;
       align-items: center; }
     .header .user-nav > *:hover {
       background-color: var(--color-grey-light-2); }
@@ -153,7 +155,9 @@ body {
       font-size: 1.4rem;
       padding: 1.5rem 3rem;
       display: flex;
-      align-items: center; }
+      justify-content: center;
+      align-items: center;
+      justify-content: flex-start; }
     .sidebar-nav__icon {
       width: 1.75rem;
       height: 1.75rem;
