@@ -21,15 +21,12 @@
     display: flex;
 }
 
-.sidebar {
-    background-color: var(--color-grey-dark-1);
 
-    flex: 0 0 18%;
-
-    // flex: flex-grow flex-shrink flex-basic;
-}
 
 .hotel-view {
     background-color: var(--color-primary);
     flex: 1;
+
+    // for test
+    min-height: 50rem;
 }

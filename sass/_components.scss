@@ -117,3 +117,57 @@
     }
 
 }
+
+
+// Sidebar Navigation
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__nav {
+        margin-top: 3.5rem;
+        list-style: none;
+    }
+
+    &__item {
+        
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+    }
+    &__link:link,
+    &__link:visited {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        padding: 1.5rem 3rem;
+        transition: all .3s;
+        display: flex;
+        align-items: center;
+
+        //TODO: hover effect will be changed later
+        &:hover {
+            background-color: var(--color-primary);
+        }
+
+    }
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: #fff;
+        margin-right: 2rem;
+    }
+
+
+    .copyright-area {
+        font-size: 1.2rem;
+        color: var(--color-grey-light-4);
+        text-align: center;
+        padding: 2.5rem;
+    }
+}
