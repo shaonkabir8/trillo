@@ -121,44 +121,44 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .sidebar__nav {
+  .sidebar-nav {
     margin-top: 3.5rem;
     list-style: none; }
-  .sidebar__item {
-    position: relative;
-    z-index: 1; }
-    .sidebar__item:not(:last-child) {
-      margin-bottom: .5rem; }
-    .sidebar__item::before, .sidebar__item--active::before {
-      position: absolute;
-      content: '';
-      left: 0;
-      top: 0;
-      width: 3px;
-      height: 100%;
-      background-color: var(--color-primary);
-      z-index: -1;
-      transform: scaleY(0);
-      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
-  .sidebar__item:hover::before, .sidebar__item--active::before {
-    transform: scaleY(1);
-    width: 100%; }
-  .sidebar__item:active::before {
-    background-color: var(--color-primary-light); }
-  .sidebar__link:link, .sidebar__link:visited {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    padding: 1.5rem 3rem;
-    display: flex;
-    align-items: center; }
-  .sidebar__icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    fill: #fff;
-    margin-right: 2rem; }
+    .sidebar-nav__item {
+      position: relative;
+      z-index: 1; }
+      .sidebar-nav__item:not(:last-child) {
+        margin-bottom: .5rem; }
+      .sidebar-nav__item::before, .sidebar-nav__item--active::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background-color: var(--color-primary);
+        z-index: -1;
+        transform: scaleY(0);
+        transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+    .sidebar-nav__item:hover::before, .sidebar-nav__item--active::before {
+      transform: scaleY(1);
+      width: 100%; }
+    .sidebar-nav__item:active::before {
+      background-color: var(--color-primary-light); }
+    .sidebar-nav__link:link, .sidebar-nav__link:visited {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      padding: 1.5rem 3rem;
+      display: flex;
+      align-items: center; }
+    .sidebar-nav__icon {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: #fff;
+      margin-right: 2rem; }
   .sidebar .copyright-area {
     font-size: 1.2rem;
     color: var(--color-grey-light-4);
