@@ -227,6 +227,20 @@ body {
   transition: all .2s; }
   .button-inline:hover {
     color: var(--color-grey-dark-1); }
+  .button-inline:focus {
+    animation: infiniteHover 1s infinite;
+    outline: none; }
+
+@keyframes infiniteHover {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }
 
 .container {
   background-color: var(--color-grey-light-1);
